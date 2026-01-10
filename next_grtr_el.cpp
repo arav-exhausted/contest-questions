@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 vector<int> NGE(vector<int>v){
     vector<int>nge(v.size());
     stack<int>st;
@@ -19,8 +18,6 @@ vector<int> NGE(vector<int>v){
 
     return nge;
 }
-
-
 
 int main() {
     int n;
