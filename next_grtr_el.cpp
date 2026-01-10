@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 vector<int> NGE(vector<int>v){
     vector<int>nge(v.size());
     stack<int>st;
@@ -15,10 +14,8 @@ vector<int> NGE(vector<int>v){
         nge[st.top()]= -1;
         st.pop();
     }
-
     return nge;
 }
-
 int main() {
     int n;
     cin>>n;
@@ -26,12 +23,9 @@ int main() {
     for(int i=0;i<n;i++){
         cin>>v[i];
     }
-
     vector<int> nge=NGE(v);
-
     for(int i=0;i<n;i++){
         cout<<v[i]<<" "<<(nge[i]== -1? -1:v[nge[i]])<<endl;
     }
-
     return 0;
 }
