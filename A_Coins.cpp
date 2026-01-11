@@ -7,11 +7,14 @@ int main() {
     while(t--){
         long long n,k;
         cin>>n>>k;
-        long long sum=0;
-        
-        
-
+        if (k % 2 == 1) {
+            cout << "YES\n";
+        } else {
+            if (n % 2 == 0) cout << "YES\n";
+            else cout << "NO\n";
+        }
     }
+    
 
     return 0;
 }
