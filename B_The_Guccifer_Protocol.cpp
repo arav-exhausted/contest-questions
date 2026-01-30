@@ -8,7 +8,6 @@ int main() {
         ll a,b,c,d;
         cin>>a>>b>>c>>d;
 
-
         ll cnt=0;
         if(b>a){
             cnt++;
