@@ -2,18 +2,13 @@
 using namespace std;
 
 int main() {
-    
-
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
     string s;
     cin>>s;
-    set<char> st;
+    string d = "WUB";
     for(int i=0;i<s.length();i++){
-        st.insert(s[i]);
-    }
-
-    for(auto c:st){
-        cout<<c;
-    }
-    
+        
+    }   
     return 0;
 }
