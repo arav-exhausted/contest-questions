@@ -5,21 +5,19 @@ using namespace std;
 #define ll long long
 int main() {
 
-    ll n,ld,c=0;
-    //extract the digits
-    vector<ll> dig;
-    while(n>0){
-        ld=n%10;
-        n /= 10;
-        dig.push_back(ld);
+    ll n,ld;
+    cin>>n;
+    int sumx=0,sumy=0,sumz=0;
+    while(n--){
+        int x,y,z;
+        cin>>x>>y>>z;
+        sumx+=x;
+        sumy+=y;
+        sumz+=z;
     }
+    if(sumx==0 && sumy==0 && sumz==0) cout<<"YES";
+    else cout<<"NO";
 
-    for(int i=0;i<dig.size();i++){
-        if(dig[i]!= 4 || dig[i] != 7) c++ ;
-    }
-
-    if(c>0) cout<<"NO";
-    else cout<<"YES";
 
     
 
