@@ -179,31 +179,31 @@ void solve1() {
 }
 
 
-// SOLVE2
 
-// void solve2(){
-//     int n,q;
-//     cin>>n>>q;
-//     vector<int>v(n);
-//     inputv(v,n);
 
-//     while(q--){
-//         int a,b,c;
-//         cin>>a>>b>>c;
-//         if(a==1){
-//             v[b-1]=c;
-//         }else if(a==2){
-//             vector<int>imp;
-//             for(int i=b-1;i<c;i++){
-//                 imp.push_back(v[i]);
-//             }
-//             int ans= imp.size()/2;
-//             nth_element(imp.begin(),imp.begin()+ans,imp.end());
-//             cout<<imp[ans]<<endl;
+void solve2(){
+    int n,q;
+    cin>>n>>q;
+    vector<int>v(n);
+    inputv(v,n);
 
-//         }
-//     }
-// }
+    while(q--){
+        int a,b,c;
+        cin>>a>>b>>c;
+        if(a==1){
+            v[b-1]=c;
+        }else if(a==2){
+            vector<int>imp;
+            for(int i=b-1;i<c;i++){
+                imp.push_back(v[i]);
+            }
+            int ans= imp.size()/2;
+            nth_element(imp.begin(),imp.begin()+ans,imp.end());
+            cout<<imp[ans]<<endl;
+
+        }
+    }
+}
 // ================= MAIN =================
 int main() {
     fastio();
