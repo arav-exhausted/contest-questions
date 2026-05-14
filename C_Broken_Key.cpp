@@ -1,10 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    
 
     int t;
     cin>>t;
@@ -18,7 +19,7 @@ int main() {
         vector<int>p(n);
         q[0]=p[0];
         for(int i=1;i<n;i++){
-            
+
         }
     }
     return 0;

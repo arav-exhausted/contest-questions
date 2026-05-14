@@ -11,24 +11,13 @@ int main() {
         for(int i=0;i<n;i++){
             cin>>a[i];
         }
-
-        if(n==2){
-            cout<<"Yes"<<endl;
-            continue;
-        };
-        sort(a.begin(),a.end());
-        int k=a[0]+a[n-1];
-        int temp=0;
-        bool help = true;
-        for(int i=0;i<n/2;i++){
-            temp=a[i]+a[n-i-1];
-            if(temp!=k) help= false;
+        map<int,int>mp;
+        for(int i=0;i<n;i++){
+            mp[a[i]]++;
         }
-
-        if(help==true) cout<<"Yes\n";
+        if(mp.size()>2) {cout<<"No\n";continue;}
+        if(abs(mp.begin()->second - mp.rbegin()->second)<=1) cout<<"Yes\n";
         else cout<<"No\n";
-
-
     }
     return 0;
 }

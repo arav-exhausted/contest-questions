@@ -1,19 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+int main() {     
     
-
-    string s;
-    cin>>s;
-    set<char> st;
-    for(int i=0;i<s.length();i++){
-        st.insert(s[i]);
-    }
-
-    for(auto c:st){
-        cout<<c;
-    }
-    
-    return 0;
+    cout<<C2<<endl;
 }

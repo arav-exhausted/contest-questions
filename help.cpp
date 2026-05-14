@@ -2,8 +2,6 @@
 using namespace std;
 
 int main() {
-    string s;
-    cin>>s;
-    cout<<s.length();
-    return 0;
+    int n= 1^4^2^3;
+    cout<<n;
 }
