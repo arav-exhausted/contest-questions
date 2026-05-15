@@ -122,6 +122,7 @@ void solve() {
     for(int i=0;i<n;i++) if(a[i]>1) ans+=a[i];
     if(a.back()==1) ans++;
     cout<<ans;nl;
+    //The change here 
 
 }
 
