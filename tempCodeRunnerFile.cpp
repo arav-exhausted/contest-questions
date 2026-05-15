@@ -1,41 +1,35 @@
-#include <bits/stdc++.h>
+//To do the code of binary search tree and some basic lower and upper bound 
+
+#include<bits/stdc++.h>
 using namespace std;
 
 
-#define ll long long
+// basixc what is binary search, it is just a boolian command jo btata hai ki koi element present hai kya ek array me and this works on a sorted array
 
-int longest_subarray(int n,vector<int> &v,int k){
-    int l=0,r=0;
-    int sum=0,maxlength=0;
-    while(r<n){
-        sum+=v[r];
-        while(sum>k){
-            sum-=v[l];
-            l+=1;
-        }
-        if(sum<=k){
-            maxlength=max(maxlength,r-l+1);
-            r+=1;
-        }
+
+bool binary_search(vector<int>&v,int k,int low,int high){
+    if(low>high) return false;
+    int mid = (low+high)/2;
+    if(k<v[mid]){
+        return binary_search(v,k,low,mid);
     }
-    return maxlength;
+    else{
+        return binary_search(v,k,mid,high);
+    }
 }
 
 
-
-
-
-
-
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-    ll t;
-    cin>>t;
-    while(t--){
-
+int main(){
+    int n;
+    cin>>n;
+    vector<int>v(n);
+    for(auto &c:v){
+        cin>>c;
     }
-    
-    return 0;
+    int k;
+    cout<<"Input the no you want to search for in the array: ";
+    cin>>k;
+    if(binary_search(v,k,0,n-1)) cout<<"Yes\n";
+    else cout<<"No\n";
 }
+
