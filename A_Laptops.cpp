@@ -113,23 +113,20 @@ vector<bool> sieve(int n) {
 }
 
 // ================= SOLVE =================
-void solve() {
-    int n;
-    cin >> n;
-
-    vector<int> a(n);
-    for(auto &x : a) cin >> x;
-    
-
-}
 
 // ================= MAIN =================
 int main() {
     fastio();
 
-    int t = 1;
+    int t,x,y;
     cin >> t;
-    while(t--) solve();
-
+    for(int i=0;i<t;i++){
+        cin>>x>>y;
+        if(x!=y){
+            cout<<"Happy Alex";
+            return 0;
+        }
+    }
+    cout<<"Poor ALex";
     return 0;
 }
