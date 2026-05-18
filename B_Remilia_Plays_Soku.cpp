@@ -121,19 +121,22 @@ void solve() {
     for(auto &x : a) cin >> x;
 
 
-
 }
 
 // ================= MAIN =================
 int main() {
     fastio();
-
-    int n, m, a, b;
-    cin>>n>>m>>a>>b;
-
-    if((m*a)<=b){ cout<<n*a;nl;}
-    
-    else cout<<((n/m)*b+min((n%m)*a,b));nl;
-
+    int t;
+    cin>>t;
+    while(t--){
+        int n,x1,x2,k;
+        cin>>n>>x1>>x2>>k;
+        int ans=0,aans=0;
+        ans= min(abs(x1-x2),n-abs(x1-x2));
+        if(n<=3) aans=ans;
+        else aans= ans+k;
+        cout<<aans;nl;
+    }
     return 0;
+    
 }

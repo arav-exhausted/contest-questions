@@ -117,8 +117,26 @@ void solve() {
     int n;
     cin >> n;
 
-    vector<int> a(n);
-    for(auto &x : a) cin >> x;
+    vector<int> w(n);
+    for(auto &x : w) cin >> x;
+    int ans=0;
+    int count1=0,count2=0;
+    for(int i=0;i<n;i++){
+        if(w[i]==0) ans++;
+        else if(w[i]==1) count1++;
+        else if(w[i]==2) count2++;
+        
+    }
+    int imp=min(count1,count2);
+    ans+=imp;
+    count1-=imp;
+    count2-=imp;
+
+    ans+=count1/3;
+    ans+=count2/3;
+
+
+    cout<<ans;nl;
 
 
 
@@ -128,12 +146,9 @@ void solve() {
 int main() {
     fastio();
 
-    int n, m, a, b;
-    cin>>n>>m>>a>>b;
-
-    if((m*a)<=b){ cout<<n*a;nl;}
-    
-    else cout<<((n/m)*b+min((n%m)*a,b));nl;
+    int t = 1;
+    cin >> t;
+    while(t--) solve();
 
     return 0;
 }

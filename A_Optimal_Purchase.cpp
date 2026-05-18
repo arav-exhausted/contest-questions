@@ -114,12 +114,11 @@ vector<bool> sieve(int n) {
 
 // ================= SOLVE =================
 void solve() {
-    int n;
-    cin >> n;
-
-    vector<int> a(n);
-    for(auto &x : a) cin >> x;
-
+    ll n,a,b;
+    cin>>n>>a>>b;
+    ll ans =0;
+    ans = (n/3)*(b) + min((n%3)*a,b);
+    cout<<ans<<endl;
 
 
 }
@@ -128,12 +127,9 @@ void solve() {
 int main() {
     fastio();
 
-    int n, m, a, b;
-    cin>>n>>m>>a>>b;
-
-    if((m*a)<=b){ cout<<n*a;nl;}
-    
-    else cout<<((n/m)*b+min((n%m)*a,b));nl;
+    int t = 1;
+    cin >> t;
+    while(t--) solve();
 
     return 0;
 }

@@ -114,26 +114,57 @@ vector<bool> sieve(int n) {
 
 // ================= SOLVE =================
 void solve() {
-    int n;
-    cin >> n;
+    string s;
+    cin >> s;
+    int n= s.length();
+    int count1=0,count2=0;
+    bool star=false;
+    for(int i=0;i<n;i++){
+        if(s[i]=='>') count1++;
+        else if (s[i]=='<') count2++;
+        else star =true;
+    }
 
-    vector<int> a(n);
-    for(auto &x : a) cin >> x;
+    bool is=false;
+    for(int i=0;i<n-1;i++){
+ 
+            if(s[i]=='>' && s[i+1]=='<'){
+                is=true;
+                break;
+            }
+ 
+            if(s[i]=='>' && s[i+1]=='*'){
+                is=true;
+                break;
+            }
+ 
+            if(s[i]=='*' && s[i+1]=='<'){
+                is=true;
+                break;
+            }
+ 
+            if(s[i]=='*' && s[i+1]=='*'){
+                is=true;
+                break;
+            }
+    }
+    if(is) {cout<<-1<<endl;return;}
+    
 
+    cout<<n-min(count1,count2);nl;
 
-
+    
 }
 
 // ================= MAIN =================
 int main() {
     fastio();
 
-    int n, m, a, b;
-    cin>>n>>m>>a>>b;
-
-    if((m*a)<=b){ cout<<n*a;nl;}
-    
-    else cout<<((n/m)*b+min((n%m)*a,b));nl;
+    int t = 1;
+    cin >> t;
+    while(t--){
+        solve();
+    }
 
     return 0;
 }
